@@ -5,7 +5,7 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: 'http://localhost:3000',
+    origin: 'https://cybersecure-one.vercel.app/',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   });
@@ -15,6 +15,6 @@ async function bootstrap() {
       forbidNonWhitelisted: true, // Throws an error if extra properties are sent
     }),
   );
-  await app.listen(process.env.PORT ?? 3001);
+  await app.listen(process.env.PORT || 3001, '0.0.0.0');
 }
 bootstrap();

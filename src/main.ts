@@ -11,8 +11,8 @@ async function bootstrap() {
   });
   app.useGlobalPipes(
     new ValidationPipe({
-      whitelist: true, // Strips out properties that are NOT in your DTO
-      forbidNonWhitelisted: true, // Throws an error if extra properties are sent
+      whitelist: true,
+      forbidNonWhitelisted: true,
     }),
   );
   await app.listen(process.env.PORT || 3001, '0.0.0.0');

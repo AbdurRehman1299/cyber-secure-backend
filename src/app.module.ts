@@ -27,7 +27,7 @@ import { BlogsModule } from './blogs/blogs.module';
         host: configService.get<string>('DB_HOST', '127.0.0.1'),
         port: configService.get<number>('DB_PORT', 5432),
         username: configService.get<string>('DB_USERNAME', 'postgres'),
-        password: configService.get<string>('DB_PASSWORD', 'my_secret_password'),
+        password: configService.get<string>('DB_PASSWORD', 'abdurrehman1288'),
         database: configService.get<string>('DB_NAME', 'todo'),
         
         entities: [__dirname + '/**/*.entity{.ts,.js}'],
